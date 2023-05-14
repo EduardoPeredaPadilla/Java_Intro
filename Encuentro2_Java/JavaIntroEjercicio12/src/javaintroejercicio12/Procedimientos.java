@@ -26,7 +26,7 @@ public class Procedimientos {
         num1 =5;
         num2 = 20;
         double val = num2 / num1;
-     
+        
         System.out.println(val);
         /*
         boolean retorno = Validar( num1,  num2);
