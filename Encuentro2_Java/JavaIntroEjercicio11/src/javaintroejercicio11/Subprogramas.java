@@ -13,10 +13,25 @@ public class Subprogramas {
 
     public static void main(String[] args) {
        
-        Scanner leer = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
+        StringBuilder stringBuilder = new StringBuilder();
+        
         System.out.println("Ingresa una frase y terminala en punto");
-        String frase = leer.nextLine();
+        
+        String frase = "";
+        int cantFrase = 0;
         //String frase = "Ayer, lunes, salimos a las once y 10.";
+        
+        while (scan.hasNext()) {
+           frase = scan.next();
+           cantFrase = frase.length();
+            if (frase.substring(0, cantFrase-1).equals(".")) {
+                break;
+            }
+            stringBuilder.append(frase);
+        }
+        
+        frase = stringBuilder.toString();
         
        String retorno = SustitucionCaracter(frase);
         System.out.println(retorno);

@@ -5,16 +5,10 @@
  */
 package javaguiaejer21;
 
-/**
- *
- * @author edmap
- */
+
 public class JavaGuiaEjer21 {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+      public static void main(String[] args) {
         
         int [ ] [ ] matrizM = new int [ 10 ] [ 10 ];
         int [ ] [ ] matrizP = new int [ 3 ] [ 3 ];
