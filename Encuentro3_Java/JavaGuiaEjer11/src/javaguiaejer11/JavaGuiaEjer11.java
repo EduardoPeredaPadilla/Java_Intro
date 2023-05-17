@@ -81,7 +81,8 @@ public class JavaGuiaEjer11 {
                     case 5:
                         System.out.println("Elegiste la opción 5. Salir");
                         System.out.println("¿Está seguro que desea salir del programa? (S/N)");
-                        salir = scan.next();
+                        salir = scan.nextLine();
+                        scan.nextLine();
                         if (salir != "S" || salir != "N") {
                             System.out.println("Opción inválida");
                             System.out.println("¿Está seguro que desea salir del programa? (S/N)");
@@ -90,7 +91,7 @@ public class JavaGuiaEjer11 {
                 }
             }
             
-        } while (salir.equalsIgnoreCase("N"));
+        } while (!salir.equalsIgnoreCase("S"));
         
         System.out.println("Hasta pronto!");
         
