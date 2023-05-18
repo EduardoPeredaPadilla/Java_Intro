@@ -81,17 +81,20 @@ public class JavaGuiaEjer11 {
                     case 5:
                         System.out.println("Elegiste la opción 5. Salir");
                         System.out.println("¿Está seguro que desea salir del programa? (S/N)");
-                        salir = scan.nextLine();
-                        scan.nextLine();
-                        if (salir != "S" || salir != "N") {
+                        //scan.nextLine();
+                        salir = scan.next();
+                        //scan.next();
+                        if (!"s".equals(salir) || !"n".equals(salir)) {
                             System.out.println("Opción inválida");
                             System.out.println("¿Está seguro que desea salir del programa? (S/N)");
+                            //scan.next();
                             salir = scan.next();
+                            //scan.next();
                         }
                 }
             }
             
-        } while (!salir.equalsIgnoreCase("S"));
+        } while (!salir.equalsIgnoreCase("s"));
         
         System.out.println("Hasta pronto!");
         

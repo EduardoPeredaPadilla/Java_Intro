@@ -7,15 +7,10 @@
 package javaejerextra23;
 
 import java.util.Scanner;
-/**
- *
- * @author edmap
- */
+
 public class JavaEjerExtra23 {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
         
         Scanner scan = new Scanner(System.in);
@@ -28,13 +23,13 @@ public class JavaEjerExtra23 {
         int x = 0;
         int z = 0;
         
-        String [ ] [ ] sopa = new String [ 10 ] [ 10 ];
+        String [ ] [ ] sopa = new String [ 20 ] [ 20 ];
         
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
+        for (int i = 0; i < 20; i++) {
+            for (int j = 0; j < 20; j++) {
                 sopa [ i ] [ j ] = "*";
                 System.out.print("[" + sopa [ i ] [ j ] + "]");
-                if (j == 9) {
+                if (j == 19) {
                     System.out.println("");
                 }
             }
@@ -43,19 +38,17 @@ public class JavaEjerExtra23 {
         System.out.println("");
         
         do {
-            //System.out.println("");
             System.out.println("Ingresa la palabra " + (x + 1));
             pal = scan.nextLine();
             cantPal = pal.length();
-           // for (int i = 0; i < 10; i++) {
            fila = (int) (Math.random()*9+0);
 
-                if (fila == filaReg) {
-                    do {
-                        fila = (int) (Math.random()*9+0);
-                    } while (fila == filaReg);
+            if (fila == filaReg) {
+                do {
+                    fila = (int) (Math.random()*9+0);
+                } while (fila == filaReg);
                 }
-                filaReg = fila;
+            filaReg = fila;
             for (int j = 0; j < 10; j++) {
                 z = j + 1;
                 if ( z == cantPal + 1) {
@@ -63,15 +56,8 @@ public class JavaEjerExtra23 {
                     break;
                 }
                 sopa [ fila ] [ j ] = pal.substring(j, z);
-//                System.out.print("[" + sopa [ fila ] [ j ] + "]");
-//                if (j == 9) {
-//                    System.out.println("");
-//                    break;
-//                }
             }
             x = x + 1;
-       // }
-            
         } while ( x < 5);
         
         for (int i = 0; i < 10; i++) {
@@ -83,7 +69,7 @@ public class JavaEjerExtra23 {
                 }
                 
                 System.out.print("[" + sopa [ i ] [ j ] + "]");
-                if (j == 9) {
+                if (j == 19) {
                     System.out.println("");
                 }
             }
