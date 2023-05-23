@@ -62,6 +62,9 @@ public class JavaGuiaEjer20 {
         int suma = 0;
         int sumaFila = 0;
         int sumaColum = 0;
+        int sumaDiag = 0;
+        int sumaDiagInv = 0;
+        
         
         int x = 0;
         int z = 0;
@@ -106,6 +109,18 @@ public class JavaGuiaEjer20 {
         if (z == N) {
             System.out.println("La suma de las columnas es igual");
         }
+        
+        
+        for (int i = 0; i < N; i++) {
+            int c = 2;
+            sumaDiag = matriz[ i ][ i ] + sumaDiag;
+            sumaDiagInv = matriz[ i ][ c ] + sumaDiagInv;
+            c --;
+        }
+        
+        System.out.println(sumaDiag);
+        System.out.println(sumaDiagInv);
+
         
         if (x == N && z == N) {
             System.out.println("La matriz es mágica");

@@ -21,7 +21,7 @@ public class JavaRelojdigital {
         Scanner scan = new Scanner(System.in);
         
         Reloj();
-
+       
     }
     
     public static void Reloj() {
@@ -35,6 +35,9 @@ public class JavaRelojdigital {
                                 
                                 System.out.print("\r" + "Reloj Digital " + i + j + ":" + k + l + ":" + m + n);
                                 esperarUnSegundo();
+                                if (i == 2 && j == 3 & k == 5 && l ==9 && m == 5 && n ==9) {
+                                    Reloj();
+                                }
                                 
                             }
                         }
@@ -42,7 +45,6 @@ public class JavaRelojdigital {
                 }
             }
         }
-        
     }
     
     public static void esperarUnSegundo() {
